@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package lotto;
 
 /**
@@ -28,5 +29,4 @@ public class Row {
     public void setStrongNumber(int strongNumber) {
         this.strongNumber = strongNumber;
     }
-    
 }
