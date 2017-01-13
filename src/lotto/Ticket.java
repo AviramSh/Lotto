@@ -17,5 +17,5 @@ public class Ticket {
     private int number;
     private List<Integer> ticket = new ArrayList<Integer>(); 
     
-    
+     
 }
