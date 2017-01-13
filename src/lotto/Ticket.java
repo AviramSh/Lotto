@@ -14,8 +14,7 @@ import java.util.List;
  */
 public class Ticket {
     
-    private int number;
-    private List<Integer> ticket = new ArrayList<Integer>(); 
+    private List<Row> ticket = new ArrayList<Row>(); 
     
-     
+         
 }
