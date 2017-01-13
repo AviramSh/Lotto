@@ -5,17 +5,17 @@
  */
 package lotto;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author AVIRAM
  */
-public class Lotto {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-      
-    }
+public class Ticket {
     
+    private int number;
+    private List<Integer> ticket = new ArrayList<Integer>(); 
+    
+     
 }
