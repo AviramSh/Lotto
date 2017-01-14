@@ -26,7 +26,6 @@ public class OuterData {
         
         for (String line : Files.readAllLines(Paths.get(allYearsFileName), StandardCharsets.UTF_8)) {
             if (line.contains("2016")||line.contains("2017")) {
-                Integer.parseInt(line.toString());
                 lines.add(line);
             }
         }
