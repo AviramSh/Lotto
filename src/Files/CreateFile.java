@@ -5,7 +5,11 @@
  */
 package Files;
 
+import java.io.*;
 import java.util.Formatter;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -13,6 +17,7 @@ import java.util.Formatter;
  */
 public class CreateFile {
     
+    private Scanner reader;
     private Formatter myFile;
     private String fileName;
     
@@ -22,8 +27,9 @@ public class CreateFile {
     
     public void openfile(){
         
+            fileName+=".txt";
         try {
-            myFile = new Formatter(fileName+".text");
+            myFile = new Formatter(fileName);
             System.out.println("File have been created.");
             
         } catch (Exception e) {
@@ -32,8 +38,25 @@ public class CreateFile {
         
     }
     public void addRecords(String date ,String numbers){
-        myFile.format(date, numbers);
+        myFile.format("%s%s",date, numbers);
     }
+    
+    public void readRecords(){
+        
+        try {
+            reader = new Scanner(new File(fileName));
+        } catch (FileNotFoundException ex) {
+            System.out.println("File does not exist");
+            Logger.getLogger(CreateFile.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        while (reader.hasNext()) {
+            System.out.println("Date "+reader.next()+" Numbers"+reader.next());
+        }
+        
+        reader.close();
+    }
+    
     
     public void closeFile(){
         myFile.close();
