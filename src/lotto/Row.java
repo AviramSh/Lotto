@@ -29,4 +29,5 @@ public class Row {
     public void setStrongNumber(int strongNumber) {
         this.strongNumber = strongNumber;
     }
+    
 }

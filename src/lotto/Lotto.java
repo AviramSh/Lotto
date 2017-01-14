@@ -5,6 +5,7 @@
  */
 package lotto;
 import Files.CreateFile;
+import java.io.IOException;
 
 import java.util.Scanner;
 
@@ -17,9 +18,12 @@ public class Lotto {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
       
-        int[] myTicket= new int[7];
+        OuterData oData=new OuterData();
+        oData.UpdateLastYearData();
+        
+    /*    int[] myTicket= new int[7];
         
         Scanner input = new Scanner(System.in);
         System.out.println("Enter Lotto 6 numbers : ");
@@ -37,13 +41,13 @@ public class Lotto {
        
        
       
-       /*Creating a text file that will contain all Lotto Records */
+       //Creating a text file that will contain all Lotto Records 
        CreateFile recordFile = new CreateFile("Records");
        
        recordFile.openfile();
        recordFile.addRecords("1/1/17", "23,34,65,22,2,11,6");
        recordFile.closeFile();
-       
+       */
        
     }
     
