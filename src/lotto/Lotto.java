@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package lotto;
+import Files.CreateFile;
 
 import java.util.Scanner;
 
@@ -33,6 +34,17 @@ public class Lotto {
         
        myRow.setNumber(myTicket);
        myRow.setStrongNumber(myTicket[7]);
+       
+       
+      
+       /*Creating a text file that will contain all Lotto Records */
+       CreateFile recordFile = new CreateFile("Records");
+       
+       recordFile.openfile();
+       recordFile.addRecords("1/1/17", "23,34,65,22,2,11,6");
+       recordFile.closeFile();
+       
+       
     }
     
     
