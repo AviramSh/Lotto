@@ -20,15 +20,29 @@ import java.util.List;
 public class OuterData {
     final String allYearsFileName="C:\\Users\\alex-ks53\\Desktop\\Lotto\\src\\Files\\AllYearsResults.txt";
     final String pastYearFileName="C:\\Users\\alex-ks53\\Desktop\\Lotto\\src\\Files\\PastYearResults.txt";
+    String[] lastYearCommonResults = null;
+    String[] lastYearLeastResults = null;
     
     public void UpdateLastYearData() throws IOException{
         List<String> lines = new ArrayList<>();
+        int i=0;
+        int j=0;
         
         for (String line : Files.readAllLines(Paths.get(allYearsFileName), StandardCharsets.UTF_8)) {
             if (line.contains("2016")||line.contains("2017")) {
                 lines.add(line);
+                //System.out.println(line.toString());
+                lastYearCommonResults=line.split(" ");
+                i= lastYearCommonResults.length;
+                j=0;
+                while(i>j)
+                {
+                    System.out.print(lastYearCommonResults[j]);
+                j++;
+                }
             }
         }
         Files.write(Paths.get(pastYearFileName), lines, StandardCharsets.UTF_8);  
-    } 
+    }
+    
 }
