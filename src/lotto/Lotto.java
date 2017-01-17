@@ -23,7 +23,7 @@ public class Lotto {
         oData.UpdateLastYearData();
          
 
-        
+         
         
         //TicketHandler myTicket = new TicketHandler();
         //System.out.println(myTicket.toString());
