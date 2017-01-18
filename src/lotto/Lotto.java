@@ -4,10 +4,9 @@
  * and open the template in the editor.
  */
 package lotto;
-import Files.CreateFile;
-import java.io.IOException;
 
-import java.util.Scanner;
+import Files.FileHandler;
+import java.io.IOException;
 
 /**
  *
@@ -19,35 +18,20 @@ public class Lotto {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
-      
+        
         OuterData oData=new OuterData();
         oData.UpdateLastYearData();
+         
+
+         
         
-    /*    int[] myTicket= new int[7];
+        //TicketHandler myTicket = new TicketHandler();
+        //System.out.println(myTicket.toString());
         
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter Lotto 6 numbers : ");
-        
-        for(int i=0;i<6;i++)
-            input.nextInt(myTicket[i]);
-        
-        System.out.println("Enter strong number : ");
-        input.nextInt(myTicket[6]);
-        
-        Row myRow = new Row();
-        
-       myRow.setNumber(myTicket);
-       myRow.setStrongNumber(myTicket[7]);
-       
-       
-      
-       //Creating a text file that will contain all Lotto Records 
-       CreateFile recordFile = new CreateFile("Records");
-       
-       recordFile.openfile();
-       recordFile.addRecords("1/1/17", "23,34,65,22,2,11,6");
-       recordFile.closeFile();
-       */
-       
+        //System.out.println("My Ticket :"+ myRow.getNumbers() + "[" + myRow.getStrongNumber() + "]");
+        //Creating a text file that will contain all Lotto Records 
+//       recordFile.openfile();
+//       recordFile.addRecords("1/1/17", "23,34,65,22,2,11,6");
+//       recordFile.closeFile();
     }
 }

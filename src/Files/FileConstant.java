@@ -3,18 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lotto;
-
-import java.util.ArrayList;
-import java.util.List;
+package Files;
 
 /**
  *
  * @author AVIRAM
  */
-public class Ticket {
+public class FileConstant {
     
-    private List<TicketHandler> ticket = new ArrayList<TicketHandler>(); 
+    public static final String fileMame="C:\\Test\\Test.txt";
     
-         
+    
 }
