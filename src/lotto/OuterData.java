@@ -22,7 +22,7 @@ public class OuterData {
     final String pastYearFileName="C:\\Users\\alex-ks53\\Desktop\\Lotto\\src\\Files\\PastYearResults.txt";
     String[] lastYearCommonResults = null;
     String[] lastYearLeastResults = null;
-    
+    String[] mainNumbersOnly=null;
     public void UpdateLastYearData() throws IOException{
         List<String> lines = new ArrayList<>();
         int i=0;
@@ -35,6 +35,13 @@ public class OuterData {
                 lastYearCommonResults=line.split(" ");
                 i= lastYearCommonResults.length;
                 j=0;
+                System.out.println(i);
+//                System.out.print(" START "+lastYearCommonResults[2]+"  ");
+//                System.out.print(lastYearCommonResults[3]+"  ");
+//                System.out.print(lastYearCommonResults[4]+"  ");
+//                System.out.print(lastYearCommonResults[5]+"  ");
+//                System.out.print(lastYearCommonResults[6]+"  ");
+//                System.out.print(lastYearCommonResults[7]+"  END ");
                 while(i>j)
                 {
                     System.out.print(lastYearCommonResults[j]);
@@ -44,5 +51,4 @@ public class OuterData {
         }
         Files.write(Paths.get(pastYearFileName), lines, StandardCharsets.UTF_8);  
     }
-    
 }
