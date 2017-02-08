@@ -5,6 +5,7 @@
  */
 package lotto;
 
+import Calculation.TestingFormula;
 import Files.FileHandler;
 import java.io.IOException;
 
@@ -19,9 +20,9 @@ public class Lotto {
      */
     public static void main(String[] args) throws IOException {
         
-        OuterData oData=new OuterData();
-        oData.UpdateLastYearData();
-         
+//        OuterData oData=new OuterData();
+//        oData.UpdateLastYearData();
+         new TestingFormula();
 
          
         
