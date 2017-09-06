@@ -31,7 +31,7 @@ public class Main {
                 i++;
                 System.out.print(scanner.next()+"|");
             }
-            System.out.println("File is good");
+            System.out.println("File is good "+i);
         }catch(FileNotFoundException e){
             System.out.println("File empty");
         }
