@@ -18,7 +18,7 @@ import Testing.*;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         
-        TestClass_1 t1 = new TestClass_1(1,2,3,4);
+//        TestClass_1 t1 = new TestClass_1(1,2,3,4);
         
         
 //        FileReader r = new FileReader("C:\\Users\\Aviram\\Desktop\\Lotto.csv");
