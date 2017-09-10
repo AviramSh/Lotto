@@ -1,8 +1,9 @@
 
-import Handlers.FileReader;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import Testing.*;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -16,6 +17,9 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
+        
+        TestClass_1 t1 = new TestClass_1(1,2,3,4);
+        
         
 //        FileReader r = new FileReader("C:\\Users\\Aviram\\Desktop\\Lotto.csv");
 //        if(r.read())
@@ -35,6 +39,10 @@ public class Main {
         }catch(FileNotFoundException e){
             System.out.println("File empty");
         }
+        
+        
+         
+         
     }
         
     
