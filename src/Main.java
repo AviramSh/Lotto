@@ -29,21 +29,21 @@ public class Main {
 //        if(r.read())
 //            System.out.println("Goood");
 //        else System.out.println("Bad");
-
-        int i =0;
-        
-        try (Scanner scanner = new Scanner(new File("C:\\Users\\Aviram\\Desktop\\Lotto.csv"))) {
-            scanner.useDelimiter(",");
-            
-            while(scanner.hasNext()){
-                i++;
-                System.out.print(scanner.next()+"|");
-            }
-            System.out.println("File is good "+i);
-        }catch(FileNotFoundException e){
-            System.out.println("File empty");
-        }
-        
+//
+//        int i =0;
+//        
+//        try (Scanner scanner = new Scanner(new File("C:\\Users\\Aviram\\Desktop\\Lotto.csv"))) {
+//            scanner.useDelimiter(",");
+//            
+//            while(scanner.hasNext()){
+//                i++;
+//                System.out.print(scanner.next()+"|");
+//            }
+//            System.out.println("File is good "+i);
+//        }catch(FileNotFoundException e){
+//            System.out.println("File empty");
+//        }
+//        
         
          
          

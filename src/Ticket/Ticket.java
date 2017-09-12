@@ -6,6 +6,7 @@
 package Ticket;
 
 import Ticket.TicketGenerator.Row;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,17 +15,23 @@ import Ticket.TicketGenerator.Row;
 public class Ticket {
 
     public Ticket(int rowNum) {
-        Row[]ticket = FillTicket(rowNum);
+        
+        ArrayList<Row> ticket =new ArrayList<Row>();
+//        Row[]ticket = FillTicket(rowNum);
         
         for(int i=0;i<rowNum;i++){
-            for (int j = 0; j < ticket.length; j++) {
-                
-                System.out.print(ticket[j]+" ");
-                if(j == (ticket.length-2))
-                    System.out.print("+");
+            ticket.add(new Row());
+        }
+        
+        
+        for (Row myRow : ticket) {
             
+            int[] temp = myRow.getMyRow();
+            for (int i = 0 ;i<temp.length; i++) {
+               System.out.print(temp[i]+" , "); 
             }
-            System.out.println();
+            System.out.println(" "); 
+            
         }
     }
     
@@ -37,7 +44,10 @@ public Row[] FillTicket(int rows){
     
     for(int i=0;i<rows;i++)
     {
-        ticket[i]=new Row();
+        Row row= new Row();
+        ticket[i]=row;
+        
+        ticket[i].getMyRow();
     }
     return ticket;
 }

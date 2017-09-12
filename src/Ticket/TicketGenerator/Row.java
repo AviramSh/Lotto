@@ -44,13 +44,10 @@ public class Row {
     }
 
     public int[] getMyRow() {
-        return numberTestArray;
+        return row;
     }
 
-    public void setNumberTestArray(int[] numberTestArray) {
-        this.numberTestArray = numberTestArray;
-    }
-    
+   
     
     
 
