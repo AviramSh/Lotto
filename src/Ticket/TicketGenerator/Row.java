@@ -43,7 +43,7 @@ public class Row {
 
     }
 
-    public int[] getNumberTestArray() {
+    public int[] getMyRow() {
         return numberTestArray;
     }
 
