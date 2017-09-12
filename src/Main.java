@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import Testing.*;
+import Ticket.Ticket;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -17,6 +18,9 @@ import Testing.*;
  */
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
+        
+        Ticket ticket=new Ticket(10);
+        
         
 //        TestClass_1 t1 = new TestClass_1(1,2,3,4);
         
