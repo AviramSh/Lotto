@@ -5,17 +5,53 @@
  */
 package Ticket.TicketGenerator;
 
+import java.util.Random;
+
 /**
  *
  * @author alex-ks53
  */
 public class Row {
 
+    Random rand = new Random();
+    int[] row = new int[7];
+//    int[] row = {0,0,0,0,0,0,0};
+    int[] numberTestArray = new int[38];
+
     public Row() {
-        int[] row ={1,2,3,4,5,6,7};
+
         
+        int num;
+
+        for (int i = 0; i < row.length; i++) {
+            
+            if(i!=6){
+                num = rand.nextInt(37) + 1;
+            }else{
+
+                num = rand.nextInt(7) + 1;
+            }
+            
+            if (numberTestArray[num] != 0) {
+                --i;
+            }else{
+                numberTestArray[num]++;
+                row[i]=num;
+            }
+
+        }
+
+    }
+
+    public int[] getNumberTestArray() {
+        return numberTestArray;
+    }
+
+    public void setNumberTestArray(int[] numberTestArray) {
+        this.numberTestArray = numberTestArray;
     }
     
     
     
+
 }

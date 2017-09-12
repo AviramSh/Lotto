@@ -5,6 +5,8 @@
  */
 package Testing;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Aviram
@@ -12,8 +14,16 @@ package Testing;
 public class TestClass_1 extends TestClass_2{
     
     
-    
+    ArrayList<Integer> p1;
     //logic
+
+    public TestClass_1(ArrayList<Integer> p1) {
+        this.p1 = p1;
+        
+    }
+    
+    
+    
     
     
     
