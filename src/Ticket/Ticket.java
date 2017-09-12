@@ -14,19 +14,31 @@ import Ticket.TicketGenerator.Row;
 public class Ticket {
 
     public Ticket(int rowNum) {
-        int[] ticket=new int[rowNum];
-        FillTicket(rowNum);
+        Row[]ticket = FillTicket(rowNum);
+        
+        for(int i=0;i<rowNum;i++){
+            for (int j = 0; j < ticket.length; j++) {
+                
+                System.out.print(ticket[j]+" ");
+                if(j == (ticket.length-2))
+                    System.out.print("+");
+            
+            }
+            System.out.println();
+        }
     }
     
     
     
 
 
-public void FillTicket(int rows){
-    Row row = new Row();
+public Row[] FillTicket(int rows){
+    Row[] ticket = null;
+    
     for(int i=0;i<rows;i++)
     {
-        
+        ticket[i]=new Row();
     }
+    return ticket;
 }
 }
