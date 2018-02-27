@@ -1,5 +1,6 @@
 
 
+import Handlers.FileReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -19,7 +20,9 @@ import Ticket.Ticket;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         
-        Ticket ticket=new Ticket(10);
+//        Ticket ticket=new Ticket(10);
+          FileReader fileReader = new FileReader("C:\\Users\\Aviram\\Desktop\\Lotto.csv");
+          fileReader.read();
         
         
 //        TestClass_1 t1 = new TestClass_1(1,2,3,4);
