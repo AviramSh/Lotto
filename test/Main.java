@@ -20,7 +20,7 @@ public class Main {
         ArrayList<Integer> list2 = new ArrayList<>();
         int[] row = new int[7];
         
-        list2.add(row);
+//        list2.add(row);
         
         
         

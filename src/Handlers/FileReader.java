@@ -5,7 +5,7 @@
  */
 package Handlers;
 
-import com.sun.org.apache.xalan.internal.xsltc.util.IntegerArray;
+//import com.sun.org.apache.xalan.internal.xsltc.util.IntegerArray;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -20,6 +20,10 @@ public class FileReader {
 //    private static final String fileName = "C:\\Users\\Aviram\\Desktop\\Lotto.csv";
     ArrayList<Integer> rows;
     ArrayList<Integer> rowsList;
+    
+    ArrayList<Integer> row = new ArrayList<>();
+    ArrayList<ArrayList<Integer>> rowsList1 = new ArrayList<>();
+    
     Scanner scanner;
     String temp;
 
@@ -29,16 +33,15 @@ public class FileReader {
 
         scanner = new Scanner(new File(file_name));
         temp = new String();
-        rows = new ArrayList<>();
+//        rows = new ArrayList<>();
         rowsList = new ArrayList<>();
+        
     }
     
     public boolean read(){
         
         scanner.useDelimiter(",");
-        String temp = "";
-        int[] row = new int[7];
-        
+
         for (int i = 0,j = 0; scanner.hasNext();j++, i++) {
             
             temp = scanner.next();
@@ -47,45 +50,62 @@ public class FileReader {
             
             
             if(i>1&&i<9){
-                rowsList.add(Integer.parseInt(temp));
+                row.add(Integer.parseInt(temp));
             }else if(i == 10){
                 i=0;
+                rowsList1.add(row);
+                row = new ArrayList<>();
             }
 
         }
         scanner.close();
         
+
         
         System.out.println("\n******************");
 
-        for (int i = 0,j=0; i < rowsList.size(); i++,j++) {
-            if(j == 7){
-                System.out.println("");
-                j=0;
-            }
-            System.out.print(" "+rowsList.get(i));
-        }
-        
-        
-        return true;
-    }
 
         
-//    public boolean read(){
-//        
-//        scanner.useDelimiter(",");
-//        
-//        while (scanner.hasNext()) {
-//            
-//            temp = scanner.next();
-//            System.out.println(temp + " ");
-//            
-//        }
-//        
-//        scanner.close();
-//        
-//        return true;
-//    }
+        for (ArrayList<Integer> myRow : rowsList1) {
+            for (Integer rowNumbers : myRow) {
+                System.out.print(" "+rowNumbers);
+            }
+            System.out.println("");
+        }
+        calc();
+        return true;
+    }
+    
+    public String calc(){
+//        ArrayList<Integer> oddList = new ArrayList<>();
+        int[] numbersAverage = new int[38];
+        int odd = 0;
+        int even = 0;
+        int powerOdd = 0;
+        int powerEven = 0;
+        
+        for (ArrayList<Integer> myRow : rowsList1) {
+            
+            for (int i = 0; i < myRow.size(); i++) {
+                if(myRow.get(i)%2!=0    &&  i!=6){
+                    odd++;
+                }else if(myRow.get(i)%2==0    &&  i!=6){
+                    even++;
+                }else if(myRow.get(i)%2!=0    &&  i==6){
+                    powerOdd++;
+                }else if(myRow.get(i)%2==0    &&  i==6){
+                    powerEven++;
+                }
+            }
+            
+        }
+        System.out.println(" The average of Odd numbers is : "+(double)odd / rowsList1.size());
+        System.out.println(" The average of Even numbers is : "+(double)even / rowsList1.size());
+        System.out.println(" The average of odd Power numbers is : "+(double)powerOdd/rowsList1.size());
+        System.out.println(" The average of odd Power numbers is : "+(double)powerEven/rowsList1.size());
+        
+        return "";
+    }
     
 
 }
